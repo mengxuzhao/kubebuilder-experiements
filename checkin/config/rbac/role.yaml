@@ -1,0 +1,35 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - tracker.meng.xu
+  resources:
+  - checkins
+  - longlivingpods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - tracker.meng.xu
+  resources:
+  - checkins/finalizers
+  - longlivingpods/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - tracker.meng.xu
+  resources:
+  - checkins/status
+  - longlivingpods/status
+  verbs:
+  - get
+  - patch
+  - update

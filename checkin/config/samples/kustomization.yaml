@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- tracker_v1alpha1_checkin.yaml
+- tracker_v1alpha1_longlivingpod.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,10 @@
+apiVersion: tracker.meng.xu/v1alpha1
+kind: CheckIn
+metadata:
+  labels:
+    app.kubernetes.io/name: checkin
+    app.kubernetes.io/managed-by: kustomize
+  name: "checkin-rsc"
+spec:
+  # TODO(user): Add fields here
+  podImage: "nginx:latest"
