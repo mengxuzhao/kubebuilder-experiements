@@ -1,0 +1,13 @@
+apiVersion: cfg2deploy.meng.xu/v1
+kind: ConfigDeployment
+metadata:
+  labels:
+    app.kubernetes.io/name: config-to-deploy
+    app.kubernetes.io/managed-by: kustomize
+  name: configdeployment
+spec:
+  deployNamespace: cfg2deploy
+  deployName: spark
+  deployImage: httpd:latest
+  deploySize: 2
+  configMsg: "What a wonderful world"

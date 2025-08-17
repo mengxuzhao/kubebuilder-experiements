@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - cfg2deploy.meng.xu
+  resources:
+  - configdeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cfg2deploy.meng.xu
+  resources:
+  - configdeployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cfg2deploy.meng.xu
+  resources:
+  - configdeployments/status
+  verbs:
+  - get
+  - patch
+  - update

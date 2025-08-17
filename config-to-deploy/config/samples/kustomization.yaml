@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- cfg2deploy_v1_configdeployment.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
